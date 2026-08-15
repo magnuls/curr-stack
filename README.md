@@ -34,7 +34,7 @@ Then:
 
 1. Open **Alacritty** — it drops you straight into a tmux session named `main`.
 2. Inside tmux, press `Ctrl-b` then `I` (capital i) once to install the tmux plugins.
-3. Run `nvim` plugins and language servers install themselves on first launch.
+3. Run `nvim` — plugins and language servers install themselves on first launch.
 
 ## What you get
 
