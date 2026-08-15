@@ -8,8 +8,8 @@ Alacritty + tmux + Neovim, on macOS.
 # get the configs
 git clone https://github.com/magnuls/curr-stack ~/curr-stack
 
-# install the programs (needs Homebrew — https://brew.sh)
-brew install neovim tmux ripgrep
+# install the dependencies (needs Homebrew — https://brew.sh)
+brew install neovim tmux ripgrep node python
 brew install --cask alacritty font-jetbrains-mono-nerd-font
 
 # put the configs in place
@@ -38,6 +38,21 @@ Then:
 | **alacritty/** | GPU-accelerated terminal. Everforest Dark, JetBrainsMono Nerd Font, opens straight into tmux. |
 | **tmux/** | Vim keys, `\|` and `-` to split, Tokyo Night status bar, sessions that survive reboots. |
 | **nvim/** | NvChad-based: C/C++ and Python LSP, debugging, treesitter. Keybindings in [nvim/CHEATSHEET.md](nvim/CHEATSHEET.md), full tour in [nvim/CONFIG-REFERENCE.md](nvim/CONFIG-REFERENCE.md). |
+
+## Dependencies
+
+Everything the configs need, all installed by the commands above:
+
+| Dependency | Needed for |
+|---|---|
+| `alacritty`, `tmux`, `neovim` | The stack itself. |
+| `font-jetbrains-mono-nerd-font` | The font Alacritty is configured to use; also the icons in the tmux and nvim status bars. |
+| `ripgrep` | Telescope's live grep (`<leader>fw`) in nvim. |
+| `node` | Mason uses it to install the pyright language server. |
+| `python` | Mason uses it to install black and debugpy. |
+| git + Xcode Command Line Tools | Cloning plugins and compiling treesitter parsers. Homebrew installs the CLT for you, so if `brew` works you already have both. |
+
+Language servers, formatters, and debuggers (clangd, pyright, ruff, black, codelldb, debugpy, stylua, …) are **not** installed by hand — Mason downloads them automatically the first time you open nvim.
 
 ## Tweaks
 
