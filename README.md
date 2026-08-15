@@ -1,4 +1,4 @@
-# dotfiles
+# curr-stack
 
 Alacritty + tmux + Neovim, on macOS.
 
@@ -6,7 +6,7 @@ Alacritty + tmux + Neovim, on macOS.
 
 ```sh
 # get the configs
-git clone https://github.com/magnuls/dotfiles ~/dotfiles
+git clone https://github.com/magnuls/curr-stack ~/curr-stack
 
 # install the programs (needs Homebrew — https://brew.sh)
 brew install neovim tmux ripgrep
@@ -14,9 +14,9 @@ brew install --cask alacritty font-jetbrains-mono-nerd-font
 
 # put the configs in place
 mkdir -p ~/.config/alacritty ~/.config/tmux ~/.config/nvim
-cp -r ~/dotfiles/alacritty/. ~/.config/alacritty/
-cp -r ~/dotfiles/tmux/.      ~/.config/tmux/
-cp -r ~/dotfiles/nvim/.      ~/.config/nvim/
+cp -r ~/curr-stack/alacritty/. ~/.config/alacritty/
+cp -r ~/curr-stack/tmux/.      ~/.config/tmux/
+cp -r ~/curr-stack/nvim/.      ~/.config/nvim/
 
 # alacritty color themes
 git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
