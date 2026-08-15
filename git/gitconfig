@@ -1,0 +1,27 @@
+# Your name and email are NOT here on purpose — they go in ~/.gitconfig.local,
+# which install.sh creates and this file includes below. That keeps the tracked
+# config identity-free so anyone can use it without committing as someone else.
+[include]
+	path = ~/.gitconfig.local
+
+[core]
+	editor = nvim
+
+[init]
+	defaultBranch = main
+
+# Authenticate pushes through the `gh` CLI instead of storing a token.
+# Run `gh auth login` once. The empty first `helper` clears any inherited
+# system helper so gh's is the only one that runs.
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

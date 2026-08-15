@@ -1,0 +1,19 @@
+
+[general]
+import = ["~/.config/alacritty/themes/themes/everforest_dark_medium.toml"]
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 14.0
+
+[window]
+padding = { x = 6, y = 1 }
+decorations = "Buttonless"   # delete this line if you want a normal titlebar
+option_as_alt = "Both"       # makes Option behave as Alt/Meta
+
+# Auto-attach: opens tmux session "main", creating it if it doesn't exist.
+# Resolved off $PATH so this works wherever tmux is installed (Apple Silicon
+# brew, Intel brew, Linux). Delete this block if you don't want tmux on launch.
+[terminal.shell]
+program = "tmux"
+args = ["new-session", "-A", "-s", "main"]

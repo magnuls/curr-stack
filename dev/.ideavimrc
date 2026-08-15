@@ -1,0 +1,7 @@
+" IdeaVim config — OA-friendly defaults
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set clipboard+=unnamed
+set scrolloff=5
