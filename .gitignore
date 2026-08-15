@@ -7,9 +7,6 @@
 .claude/
 CLAUDE.md
 
-# NOT tracked here on purpose — install.sh clones these instead of vendoring
-# them, because together they are ~150MB of someone else's git history:
-#   ~/.config/alacritty/themes   alacritty/alacritty-theme  (56M, mostly screenshots)
-#   ~/.config/tmux/plugins/*     TPM and the plugins it manages
-#   ~/.oh-my-zsh                 oh-my-zsh + powerlevel10k
-#   ~/.config/nvim               github.com/magnuls/Nvim-Setup
+# Cloned at install time, not vendored (see README):
+#   ~/.config/alacritty/themes   github.com/alacritty/alacritty-theme
+#   ~/.config/tmux/plugins       TPM and the plugins it manages

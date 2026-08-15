@@ -12,8 +12,9 @@ decorations = "Buttonless"   # delete this line if you want a normal titlebar
 option_as_alt = "Both"       # makes Option behave as Alt/Meta
 
 # Auto-attach: opens tmux session "main", creating it if it doesn't exist.
-# Resolved off $PATH so this works wherever tmux is installed (Apple Silicon
-# brew, Intel brew, Linux). Delete this block if you don't want tmux on launch.
+# GUI-launched Alacritty gets launchd's bare PATH (no /opt/homebrew/bin), so
+# tmux must be resolved through a login shell, which sources .zprofile and
+# picks up brew's PATH on any machine. Delete this block to skip tmux on launch.
 [terminal.shell]
-program = "tmux"
-args = ["new-session", "-A", "-s", "main"]
+program = "/bin/zsh"
+args = ["--login", "-c", "exec tmux new-session -A -s main"]

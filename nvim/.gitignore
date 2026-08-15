@@ -1,0 +1,20 @@
+# Nothing here is written by this config -- it is all state nvim, lazy.nvim or
+# the OS drops into the config directory at runtime. lazy-lock.json is tracked
+# deliberately: it pins the plugin versions this config is known to work with.
+
+# lazy.nvim / plugin state
+/lazy-lock.json.bak
+
+# :mkspell output and netrw history
+/spell/
+.netrwhist
+
+# nvim writes these when the config dir is also the cwd
+/session.vim
+/Session.vim
+*~
+*.swp
+*.swo
+
+# macOS
+.DS_Store
