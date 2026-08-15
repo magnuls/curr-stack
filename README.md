@@ -29,15 +29,15 @@ Then:
 
 1. Open **Alacritty** — it drops you straight into a tmux session named `main`.
 2. Inside tmux, press `Ctrl-b` then `I` (capital i) once to install the tmux plugins.
-3. Run `nvim` — plugins and language servers install themselves on first launch.
+3. Run `nvim` plugins and language servers install themselves on first launch.
 
 ## What you get
 
 | | |
 |---|---|
-| **alacritty/** | GPU-accelerated terminal. Everforest Dark, JetBrainsMono Nerd Font, opens straight into tmux. |
+| **alacritty/** | Terminal: Everforest Dark, JetBrainsMono Nerd Font, opens straight into tmux. |
 | **tmux/** | Vim keys, `\|` and `-` to split, Tokyo Night status bar, sessions that survive reboots. |
-| **nvim/** | NvChad-based: C/C++ and Python LSP, debugging, treesitter. Keybindings in [nvim/CHEATSHEET.md](nvim/CHEATSHEET.md), full tour in [nvim/CONFIG-REFERENCE.md](nvim/CONFIG-REFERENCE.md). |
+| **nvim/** | NvChad: C/C++ and Python LSP, debugging, treesitter. Keybindings in [nvim/CHEATSHEET.md](nvim/CHEATSHEET.md), full tour in [nvim/CONFIG-REFERENCE.md](nvim/CONFIG-REFERENCE.md). |
 
 ## Dependencies
 
