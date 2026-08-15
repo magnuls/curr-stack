@@ -13,8 +13,9 @@ option_as_alt = "Both"       # makes Option behave as Alt/Meta
 
 # Auto-attach: opens tmux session "main", creating it if it doesn't exist.
 # GUI-launched Alacritty gets launchd's bare PATH (no /opt/homebrew/bin), so
-# tmux must be resolved through a login shell, which sources .zprofile and
-# picks up brew's PATH on any machine. Delete this block to skip tmux on launch.
+# tmux is resolved through a login shell, which sources .zprofile and picks up
+# brew's PATH on any machine. If tmux is missing you get a plain zsh prompt
+# instead of an instantly-closing window. Delete this block to skip tmux.
 [terminal.shell]
 program = "/bin/zsh"
-args = ["--login", "-c", "exec tmux new-session -A -s main"]
+args = ["--login", "-c", "command -v tmux >/dev/null && exec tmux new-session -A -s main; exec zsh --login"]
