@@ -5,10 +5,15 @@ Alacritty + tmux + Neovim, on macOS.
 ## Install
 
 ```sh
+# install Homebrew if you don't have it (also installs git and the Xcode
+# Command Line Tools). After it finishes, follow the "Next steps" it prints
+# to add brew to your PATH.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # get the configs
 git clone https://github.com/magnuls/curr-stack ~/curr-stack
 
-# install the dependencies (needs Homebrew — https://brew.sh)
+# install the programs
 brew install neovim tmux ripgrep node python
 brew install --cask alacritty font-jetbrains-mono-nerd-font
 
